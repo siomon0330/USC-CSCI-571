@@ -1,0 +1,289 @@
+
+#head{
+    width: 1252px;
+    height: 86px;
+/*    border: 2px solid;*/
+    display: block;
+    margin: 5px 0 0 7.5%;
+     
+}
+
+#pic{
+/*    float: left;*/
+    display: inline-block;
+    margin-top: 10px;
+}
+#prefer{
+/*    border: 10px solid red;*/
+    
+    width: 400px;
+    display: inline-block;
+    margin: 1% 0.5% 0 14%;
+    position: relative;
+    top: -25px;
+    font-size: 19px
+    
+/*    font-family: sans-serif*/
+        
+    
+        
+}
+#prefer h4{
+    color: #3987D2; 
+    text-align: right;
+    font-family: Arial
+}
+
+#applyNow{
+/*    float: right;*/
+    background: #B6293B;  
+    width: 168px;
+    height: 50px;
+    display:inline-block;
+    text-align: center;
+    border-radius: 3px;  
+    position: relative;
+    top: -10px;
+/*    padding: 5px;*/
+    position: relative;
+    top: -45px;
+    box-shadow: inset 0px 1px 7px 0px white;
+    
+}
+
+#applyNow a{
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    position: relative;
+    top: 11px;
+    //box-shadow: inset 0px 1px 4px 0px white;
+    
+}
+
+#applyNow:hover{
+    background: brown
+}
+
+
+#neck{
+    background: #14426E;
+    height: 480px;
+/*    font-family: Arial*/
+}
+
+#need{
+    color: white;
+    width: 430px;
+    margin: 0 auto;
+    padding-top: 60px;
+    font-family: Arial;
+    font-size: 65px;
+        
+}
+#see{
+    color: white;
+    width: 580px;
+    margin: 0 auto;
+    font-family: Arial;
+    font-size: 65px;
+    position: relative;
+    top: -12px
+}
+
+#personal{
+    color: white;
+    width: 885px;
+    margin: 30px auto;
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: 100;
+}
+
+
+#wordAndPic{
+    display: block;
+}
+#getInfo{
+    
+    display: inline-block;
+    vertical-align: top;
+    margin:0 26% 10% 44%;
+    position: relative;
+    top: 40px;
+    
+    
+/*    border: 0.001px solid white;    */
+}
+
+#getInfo a{
+    color: white;
+    text-decoration: none;
+    background: #B6293B;
+    padding: 10px 30px ;
+    border-radius: 4px;
+    font-size: 30px;
+    box-shadow: inset 0px 1px 4px 0px white;
+    font-family: sans-serif
+/*    padding: 15px*/
+}
+
+#wordAndPic a:hover{
+    background: brown;
+}
+
+
+#BBBpic{
+   display: inline-block;
+/*    border: 1px solid green;*/
+/*    vertical-align: top*/
+    position: relative;
+    top: 40px;
+        
+    
+}
+#leg{
+    width: 720px;
+    height: 400px;
+    margin: auto;
+    font-family: Arial;
+    position: relative;
+    top: -30px;
+        
+/*    border: 2px solid;*/
+    
+        
+}
+#why{
+    color:#3A85D2;
+    width: 830px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: -36px;
+    font-size: 26px;
+
+
+}
+
+#why h1{
+    align-content:center;
+    font-family: Arial;
+}
+
+#leftList{
+    width:356px;
+    float: left;
+/*    font-size: 25px*/
+    
+}
+
+#rightList{
+    width:360px;
+    float: right
+    
+}
+
+.title{
+/*    background: url(checkmark.png) left top no-repeat;*/
+    padding-left: 50px;
+    list-style: none; 
+    font-size: 26px;
+/*    font-weight: bold*/
+}
+
+.info{
+/*    background: url(checkmark.png) left top no-repeat;*/
+    list-style: none;
+    font-size: 20px;  
+    padding-left: 50px;
+    padding-bottom: 30px;
+    color: #6C6862;
+        
+}
+
+.check{
+    float: left; 
+}
+
+#thirdList{
+    padding-bottom: 65px;
+}
+
+
+#footer{
+    height: 115px;
+    background-color: #14426E;
+    border-top: 10px solid #3A85D2;
+    border-bottom: 1px solid #14426E;
+    font-family: Arial；
+        
+          
+}
+.whiteWords{
+ color: white;
+ text-decoration: none;
+}
+
+#legal{
+    border-bottom: 2px solid #3A85D2;
+    display: block;
+    height: 50px;
+}
+#legal p{
+    display: inline-block;
+    font-size: 15px
+}
+#legal a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial
+}
+#legal a:hover{
+    text-decoration: underline
+}
+#dot{
+    color: #3A85D2;
+}
+
+#copy{
+  font-size: 12px;
+  color: white;
+  font-family: Arial
+      
+}
+
+#foot{
+    width: 1000px;
+    margin:auto;  
+}
+
+body{
+    margin: 0;
+    border-top: 7px solid #14426E;
+}
+
+#one{
+    height: 100px;
+    border-bottom: 1px solid;
+        
+}
+#apply_now{
+    height: 100px;
+    border-bottom: 1px solid;
+}
+#get_info{
+    height: 100px;
+    border-bottom: 1px solid;
+}
+#legal_privacy{
+    height: 100px;
+    border-bottom: 1px solid;
+}
+#disclosure{
+    height: 100px;
+    border-bottom: 1px solid;
+}

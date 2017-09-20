@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <style>
+        #head{
+            margin-top: 20%;
+            margin-left: 30%;
+            align-items: center;
+            position: relative;
+                
+        }
+        #input{
+            width: 20%;
+            margin-bottom: 1%;
+            display: inline-block; 
+        }
+        #text{
+            width: 130%;
+            margin-left: 38%;
+        }
+        #button{
+            margin-top: 15%;
+            margin-left: 55%;
+        }
+        
+        
+    </style>
+    </head>
+<body>
+    <div id="head">
+      <h3>Enter URL for Airlines List JSON File</h3>
+      <form	id="input" name="myform" method="POST" id="location">
+       <input id="text" type="text" name="URL" maxlength="255" size="100" value=""/>
+       <br />
+      <input id="button" type="button" name="submit" value="Submit Query" onClick="loadJson(this.form)"/>
+      </form>
+        </div>
+    
+    
+    
+<script type="text/javascript">
+    
+
+    
+//var xmlDoc;
+    var xmlhttp;
+    
+function loadJson(form) {
+
+    var url	= form.URL.value;	
+    
+ if (window.XMLHttpRequest)
+ {
+     // code for IE7+, Firefox, Chrome, Opera, Safari
+     xmlhttp=new XMLHttpRequest();
+     xmlhttp.overrideMimeType("application/json");
+     
+     
+ }
+ else
+ {
+     // code for IE6, IE5
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+     
+   try{
+     xmlhttp.open("GET",url,false); //open, send, responseText are
+     
+     xmlhttp.send(); //properties of XMLHTTPRequest
+    
+     
+   }catch(err){
+      
+      
+      // console.log(err.message);
+        alert("The Json file " + url + " doesn't exist!");
+//       if(err.message == "Unexpected end of JSON input"){
+//            alert("The file " + url + " is Empty!");
+//       }
+//       if(err.message == "Cannot read property 'length' of undefined"){
+//            alert("The file " + url + " doesn't contain any airline!");
+//       }
+//       if(err.message == "Unexpected token C in JSON at position 0"){
+//           
+//            alert("The Json file " + url + " doesn't exist!");
+//       }
+//       
+       return;
+   }
+   
+//     xmlDoc=xmlhttp.responseText;
+//     return xmlDoc;
+    
+    
+//    xmlhttp.onreadystatechange = function(){
+//         if (this.readyState == 4 && this.status == 200) {
+//             generateHTML(xmlhttp.responseText);
+//        }
+//    }
+    generateHTML(xmlhttp.responseText);
+   
+ }
+    
+    
+    
+
+function generateHTML(xmlDoc){ 
+    
+    console.log(xmlDoc);
+
+    var table = "";
+    table +="<html><head><title>JSON Parse Result</title></head><body>"
+    table += "<table border=2 id='table'><tr>"  
+    
+   try{
+       
+    var json = JSON.parse(xmlDoc);
+       
+   }catch(err){
+       alert("The Json file doesn't exist!");
+       return;
+   }
+  
+   
+    var title = json["Mainline"]["Table"]["Header"]["Data"];
+    if(json["Mainline"]["Table"]["Row"] == undefined){
+         alert("The Json file doesn't contain any airline!");
+         return;
+    }
+    
+   
+    
+    for(i = 0; i < title.length; i++){
+        table += "<th>" + title[i] + "</th>"
+    }
+    table += "</tr>"
+    
+
+
+    var obj = json["Mainline"]["Table"]["Row"];
+    for( i = 0; i < obj.length; i++){
+
+        var header_keys = Object.keys(obj[i]);
+
+       table += "<tr>";
+        for(j=0; j<header_keys.length; j++){	
+
+          var header=header_keys[j];
+
+
+          if(header=="Airline") {		
+                table += "<td>" +obj[i][header]+ "</td>";
+
+          }
+          if(header=="IATA") {	
+              table += "<td>" +obj[i][header]+ "</td>";
+
+          }
+          if(header=="Hubs"){
+              var hub = obj[i][header]["Hub"];
+
+              table += "<td>";
+              table += "<ul>"
+              for(x = 0; x < hub.length; x++){
+                  if(x == 0){
+                      table += "<li>" + "<span style='font-weight:bold'>" + hub[x] + "</span>" + "</li>";
+                  }else{
+                      table += "<li>" + hub[x] + "</li>";
+                  }
+
+
+              }
+              table += "</ul>"
+              table +=  "</td>";
+
+          }				
+
+         if(header=="Notes"){
+             table += "<td>" +obj[i][header]+ "</td>";
+
+         }		
+
+         if(header=="HomePage"){
+             var link = '<a href="'+ obj[i][header]+'">' + obj[i][header] + '</a>';
+             table += "<td>" +link+ "</td>";
+
+         }	
+        if(header == "Plane"){
+            var pic = '<img src="' + obj[i][header]+ '"style="max-height:100%; max-width:100%">';
+             table += "<td>" +pic+ "</td>";
+        }
+    }
+        table += "</tr>"
+
+    }
+       table += "</table><NOSCRIPT></body>"
+         console.log(table);
+
+    var html_text = table;   
+    var hWin;
+
+    if (window.ActiveXObject){ 
+        if (xmlDoc.parseError.errorCode != 0) {
+            var myErr = xmlDoc.parseError;
+            //generateError(xmlDoc);
+            hWin = window.open("", "Error", "height=300,width=340");
+            hWin.document.write(html_text);
+        } else { 
+            //generateHTML(xmlDoc);
+            hWin = window.open("", "Assignment4", "height=800,width=1000");
+            hWin.document.write(html_text); 
+        }
+    } else //else if FF, execute script once XML object has loaded
+    { 
+       // xmlDoc.onload=generateHTML(xmlDoc);
+        hWin = window.open("", "US Airlines", "scrollbars=yes,height=800,width=1000");
+        hWin.document.write(html_text); 
+    }
+        hWin.document.close();
+    
+}
+
+</script> 
+    
+    <NOSCRIPT>
+    </body>
+
+</html>

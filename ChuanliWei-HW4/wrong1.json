@@ -1,0 +1,100 @@
+{
+  "Mainline": {
+    "Table": {
+      "Header": {
+        "Data": [
+          "Air",
+          "IAT",
+          "Hube",
+          "Note",
+          "HomePag",
+          "Plan"
+        ]
+      },
+      "Row": [
+        {
+          "Air": "Alaska Airlines",
+          "IAT": "AS",
+          "Hube": {
+            "Hub": [
+              "Seattle/Tacoma",
+              "Anchorage",
+              "Portland (OR)",
+              "San Diego",
+              "San Jose"
+            ]
+          },
+          "Note": "Founded as McGee Airways, and commenced operations in 1944 as Alaska Airlines. Plans have been made for Alaska Airlines to acquire Virgin America.",
+          "HomePag": "https://www.alaskaair.com/",
+          "Plan": "http://cs-server.usc.edu:45678/hw/hw4/Alaska_Airlines,_Boeing_737.jpg"
+        },
+          
+        {
+          "Air": "American Airlines",
+          "IAT": "AA",
+          "Hube": {
+            "Hub": [
+              "Dallas/Fort Worth",
+              "Charlotte",
+              "Chicago-O'Hare",
+              "Los Angeles",
+              "Miami",
+              "New York-JFK",
+              "New York-LaGuardia",
+              "Philadelphia",
+              "Phoenix",
+              "Washington-National"
+            ]
+          },
+          "Note": "Founded as American Airways; largest airline in the world based on airline company revenue, scheduled passenger miles flown (per year), and fleet size.",
+          "HomePag": "http://www.aa.com",
+          "Plan": "http://cs-server.usc.edu:45678/hw/hw4/American_Airlines_Boeing_777.png"
+        },
+          
+        {
+          "Air": "Delta Air Lines",
+          "IAT": "DL",
+          "Hube": {
+            "Hub": [
+              "Atlanta",
+              "Amsterdam",
+              "Boston",
+              "Detroit",
+              "Minneapolis/St Paul",
+              "Cincinnati",
+              "New York-JFK",
+              "New York-LaGuardia",
+              "Paris-Charles de Gaulle",
+              "Salt Lake City",
+              "Seattle",
+              "Tokyo-Narita"
+            ]
+          },
+          "Note": "Founded as Huff Daland Dusters; largest airline in the world based on number of passengers served per year.",
+          "HomePag": "https://www.delta.com",
+          "Plan": "http://cs-server.usc.edu:45678/hw/hw4/Delta_B747.jpg"
+        },
+          
+        {
+          "Air": "Frontier Airlines",
+          "IAT": "F9",
+          "Hube": {
+            "Hub": [
+              "Denver",
+              "Atlanta",
+              "Chicago-O'Hare",
+              "Cleveland",
+              "Miami",
+              "Orlando",
+              "Trenton",
+              "Washington-Dulles"
+            ]
+          },
+          "Note": "Frontier Airlines is an American ultra low cost carrier headquartered in Denver, Colorado.",
+          "HomePag": "http://www.flyfrontier.com/",
+          "Plan": "http://cs-server.usc.edu:45678/hw/hw4/Airbus_A320-214,_Frontier_Airlines.jpg"
+        }
+      ]
+    }
+  }
+}
